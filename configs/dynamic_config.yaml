@@ -1,0 +1,6 @@
+auto_sending: true
+rate_limit: 2
+scheduler_queue_capacity: 100
+scheduler_interval: 120
+webhook_url: "https://webhook.site/461bdc83-d50e-4acd-a542-58a3ec122716"
+webhook_auth_key: "your_auth_key_here"

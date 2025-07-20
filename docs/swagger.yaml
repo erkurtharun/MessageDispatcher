@@ -1,0 +1,61 @@
+definitions:
+  entities.Message:
+    properties:
+      content:
+        type: string
+      id:
+        type: integer
+      recipient_phone:
+        type: string
+      sent_at:
+        type: string
+      sent_status:
+        type: boolean
+    type: object
+info:
+  contact: {}
+paths:
+  /sent:
+    get:
+      description: Gets all sent messages from the repository via service.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/entities.Message'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Retrieve list of sent messages
+  /start:
+    post:
+      consumes:
+      - application/json
+      description: Starts the scheduler if not running.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Started
+          schema:
+            type: string
+      summary: Start automatic message sending
+  /stop:
+    post:
+      consumes:
+      - application/json
+      description: Stops the scheduler if running.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Stopped
+          schema:
+            type: string
+      summary: Stop automatic message sending
+swagger: "2.0"

@@ -1,32 +1,121 @@
-# If you prefer the allow list template instead of the deny list, see community template:
-# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
-#
-# Binaries for programs and plugins
+# Go-specific files
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
 
-# Test binary, built with `go test -c`
+# Test binaries and coverage
 *.test
-
-# Code coverage profiles and other test artifacts
 *.out
-coverage.*
 *.coverprofile
-profile.cov
+cover.html
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
+# Dependency directories
+/vendor/
+/bin/
+/tmp/
 
-# Go workspace file
+# Go workspace and module files
 go.work
 go.work.sum
 
-# env file
+# Environment and secrets
 .env
+.env.local
+.env.*.local
+*.secret
 
-# Editor/IDE
-# .idea/
-# .vscode/
+# Logs
+*.log
+logs/
+
+# OS-specific files
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+.Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.nfs*
+.trash
+*.bak
+
+# IDE/Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+.project
+.cproject
+.settings/
+.buildpath
+*.iml
+*.code-workspace
+.nvimlog
+.vimsession
+
+# Build artifacts and temp
+/dist/
+/build/
+/out/
+*.prof
+*.race
+
+# Coverage and profiling
+cover.out
+cpu.out
+mem.out
+mutex.out
+block.out
+trace.out
+
+# Other common
+.DS_Store?
+ehthumbs_vista.db
+Thumbs.db:encryptable
+~$*
+*$
+*#*
+.#*
+*.rej
+*.orig
+*.~lock.*
+*~
+.#*
+*#
+*.bak
+*.old
+*.tmp
+*.temp
+temp/
+tmp/

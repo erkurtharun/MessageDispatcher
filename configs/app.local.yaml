@@ -1,0 +1,30 @@
+db:
+  url: "postgres://postgres_user:MyPassw0rd123!@db:5432/postgres?sslmode=disable"
+  user: "postgres_user"
+  password: "MyPassw0rd123!"
+  host: "db"
+  port: 5432
+  dbname: "postgres"
+  ssl_mode: "disable"
+  max_open_connections: 100
+  max_idle_connections: 10
+  conn_max_lifetime: 300
+
+redis:
+  addr: "redis:6379"
+  password: ""
+  db: 0
+  pool_size: 20
+  min_idle_connections: 5
+  max_retries: 3
+
+port: ":8080"
+
+server:
+  read_timeout: 10
+  write_timeout: 30
+  idle_timeout: 60
+
+remote:
+  etcd_endpoints:
+    - "etcd:2379"
